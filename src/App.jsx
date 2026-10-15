@@ -11,6 +11,7 @@ const LINKEDIN = 'https://www.linkedin.com/in/pratik-maurya-ab6358279/'
 const PROJECT_REPO = 'https://github.com/pradeep-r04/parkease'
 const LIVE_PROJECT = 'https://parkease-frontend-c5ff.onrender.com'
 const EMAIL = 'mauryapratik70@gmail.com'
+const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}`
 
 const skills = [
   { title: 'Frontend', icon: Globe, items: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI', 'DOM'] },
@@ -116,7 +117,9 @@ function App() {
           <div className="hero-socials">
             <a href={GITHUB} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
             <a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
-            <a href={`mailto:${EMAIL}`} aria-label="Email"><Mail size={18} /></a>
+            <a href={GMAIL_COMPOSE} target="_blank" rel="noopener noreferrer" aria-label="Email">
+              <Mail size={18} />
+            </a>
             <span className="social-divider" /><span className="location"><MapPin size={14} /> Delhi, India</span>
           </div>
         </div>
@@ -219,9 +222,9 @@ function App() {
 
       <section className="section-wrap github-section">
         <div className="github-panel reveal">
-          <div className="github-copy"><span className="eyebrow">05 / CODE IN PUBLIC</span><h2>Follow the work<br/>as it evolves.</h2><p>My GitHub is where projects, experiments, and learning-in-progress come together.</p><a className="button button-primary" href={GITHUB} target="_blank" rel="noreferrer">Visit GitHub <Github size={16} /></a></div>
+          <div className="github-copy"><span className="eyebrow">05 / CODE IN PUBLIC</span><h2>Follow the work<br />as it evolves.</h2><p>My GitHub is where projects, experiments, and learning-in-progress come together.</p><a className="button button-primary" href={GITHUB} target="_blank" rel="noreferrer">Visit GitHub <Github size={16} /></a></div>
           <div className="github-visual">
-            <div className="github-window"><div className="github-window-bar"><Github size={16} /><span>Pratik10000 / overview</span><span className="window-more">•••</span></div><div className="github-window-body"><div className="gh-line gh-wide" /><div className="gh-line gh-short" /><div className="gh-line gh-medium" /><div className="gh-activity-title">Contribution activity</div><div className="contribution-grid">{Array.from({ length: 84 }, (_, i) => <i key={i} className={`level-${(i * 7 + Math.floor(i / 5) * 3) % 5}`} />)}</div><div className="gh-legend"><span>Less</span>{[0,1,2,3,4].map(n => <i className={`level-${n}`} key={n} />)}<span>More</span></div></div></div>
+            <div className="github-window"><div className="github-window-bar"><Github size={16} /><span>Pratik10000 / overview</span><span className="window-more">•••</span></div><div className="github-window-body"><div className="gh-line gh-wide" /><div className="gh-line gh-short" /><div className="gh-line gh-medium" /><div className="gh-activity-title">Contribution activity</div><div className="contribution-grid">{Array.from({ length: 84 }, (_, i) => <i key={i} className={`level-${(i * 7 + Math.floor(i / 5) * 3) % 5}`} />)}</div><div className="gh-legend"><span>Less</span>{[0, 1, 2, 3, 4].map(n => <i className={`level-${n}`} key={n} />)}<span>More</span></div></div></div>
             <p className="github-caption"><span className="live-dot" /> GitHub profile data is fetched live when available. The grid above is a decorative illustration, not actual contribution data.</p>
           </div>
         </div>
@@ -231,7 +234,7 @@ function App() {
         <SectionHeading eyebrow="06 / LET'S CONNECT" title="Have an idea?<br/>Let's talk." note="Open to internships, entry-level opportunities, collaborations, and interesting projects." />
         <div className="contact-grid">
           <div className="contact-left reveal"><p className="large-copy">Good things start with a conversation. Send me a note and let's see what we can build.</p>
-            <a className="contact-detail" href={`mailto:${EMAIL}`}><span className="contact-detail-icon"><Mail size={18} /></span><span><small>EMAIL ME</small><strong>{EMAIL}</strong></span><ArrowUpRight size={16} /></a>
+            <a className="contact-detail" href={GMAIL_COMPOSE} target="_blank" rel="noopener noreferrer"><span className="contact-detail-icon"><Mail size={18} /></span><span><small>EMAIL ME</small><strong>{EMAIL}</strong></span><ArrowUpRight size={16} /></a>
             <a className="contact-detail" href={LINKEDIN} target="_blank" rel="noreferrer"><span className="contact-detail-icon"><Linkedin size={18} /></span><span><small>CONNECT ON LINKEDIN</small><strong>Pratik Maurya</strong></span><ArrowUpRight size={16} /></a>
             <div className="contact-location"><MapPin size={15} /> Delhi, India <span>·</span> IST (UTC+5:30)</div>
           </div>
